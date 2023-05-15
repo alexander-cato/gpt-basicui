@@ -1,7 +1,7 @@
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: #f4f4f4;
-  color: #7a8fa7;
+  color: #333;
   line-height: 1.6;
   margin: 0;
   }
@@ -139,7 +139,7 @@ select:hover {
 }
 
 .genie-response {
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #4580D6);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   color: #FFF;
 }
@@ -259,7 +259,7 @@ body.dark-mode .footer-link:hover {
 }
 
 .genie-response {
-  background-color: #cbcbcb;
+  background-color: #7db8ff;
 }
 
 body.dark-mode .response {
