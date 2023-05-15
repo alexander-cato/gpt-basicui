@@ -1,18 +1,18 @@
 body {
   font-family: "Ubuntu", sans-serif;
   background-color: #f4f4f4;
-  color: #333;
+  color: #7a8fa7;
   line-height: 1.6;
   margin: 0;
   }
 
 body.dark-mode {
   background-color: #1c1c1c;
-  color: #f4f4f4;
+  color: #e5e6e6;
 }
 
 .navbar {
-  background: linear-gradient(to right, #5C5AD7, #5C5AD7);
+  background: linear-gradient(to right, #a0b1c4, #abbcd0);
   color: #fff;
   text-align: left;
   padding: 1rem;
@@ -81,7 +81,7 @@ body.dark-mode {
 
 #input-text:focus {
   outline: none;
-  border: 1px solid #760CDA;
+  border: 1px solid #a6c6ea;
   box-shadow: 0 0 3px #000;
 }
 
@@ -92,7 +92,7 @@ body.dark-mode {
 }
 
 button {
-  background: linear-gradient(to right, #5C5AD7, #4142D8);
+  background: linear-gradient(to right, #a0b1c4, #abbcd0);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -104,7 +104,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #4142D8, #5C5AD7);
+  background: linear-gradient(to right, #a0b1c4, #abbcd0);
   background-color: #4580D6;
 }
 
