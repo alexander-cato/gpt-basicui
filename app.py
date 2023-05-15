@@ -58,6 +58,7 @@ def set_model():
         return jsonify({"status": "Model changed"}), 200
     return jsonify({"error": "No model specified"}), 400
 
+@app.route("/api/get_rules", methods=["GET"])
 def get_rules():
     with open("rules.txt", "r") as file:
         rules = file.read()
