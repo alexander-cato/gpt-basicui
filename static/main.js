@@ -154,15 +154,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const modelSelect = document.getElementById("model-select");
     modelSelect.addEventListener("change", changeModel);
 
-    const inputText = document.getElementById("input-text");
-    inputText.addEventListener("keypress", handleKeyPress);
+    const inputText = document.getElementById('input-text');
+    inputText.addEventListener('input', autoResize);
 
-document.getElementById("input-text").addEventListener("input", autoResizeTextarea);
-
-function autoResizeTextarea() {
-    this.style.height = "auto";
-    this.style.height = (this.scrollHeight) + "px";
-}
+    function autoResize() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+    }
 
     document
         .querySelector(".dark-mode-toggle")
