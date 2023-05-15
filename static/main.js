@@ -55,7 +55,7 @@ function handleFormSubmit(event) {
             })
             .then((response) => {
                   if (!response.ok) {
-                        throw new Error("Sorry, OpenAI's API is having problems (usually gpt4 related) - usually trying again will work or use gpt-3.5");
+                        throw new Error("The development server is not responding. It may be overloaded. Please try again in 10 seconds.");
                   }
                   return response.json();
             })
@@ -148,16 +148,33 @@ function clearConversation() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-      const modelSelect = document.getElementById("model-select");
-      modelSelect.addEventListener("change", changeModel);
+    loadRules();
+    const modelSelect = document.getElementById("model-select");
+    modelSelect.addEventListener("change", changeModel);
 
-      const inputText = document.getElementById("input-text");
-      inputText.addEventListener("keypress", handleKeyPress);
+    const inputText = document.getElementById("input-text");
+    inputText.addEventListener("keypress", handleKeyPress);
 
-      document
-            .querySelector(".dark-mode-toggle")
-            .addEventListener("click", function () {
-                  document.body.classList.toggle("dark-mode");
-                  this.classList.toggle("dark");
-            });
+    document
+        .querySelector(".dark-mode-toggle")
+        .addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            this.classList.toggle("dark");
+        });
 });
+
+function loadRules() {
+    fetch("/api/get_rules", {
+        method: "GET",
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        conversationHistory.push({
+            role: "rules",
+            content: data.rules,
+        });
+    })
+    .catch((error) => {
+        console.error(error);
+    });
+}

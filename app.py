@@ -6,11 +6,9 @@ app = Flask(__name__)
 
 current_model = "gpt-4"
 
-
 @app.route("/")
 def home():
     return render_template("index.html")
-
 
 @app.route("/api/chatgpt", methods=["POST"])
 def chatgpt():
@@ -22,11 +20,9 @@ def chatgpt():
 
     return jsonify({"output": response_text})
 
-
 @app.route("/static/main.js")
 def serve_js():
     return app.send_static_file("main.js")
-
 
 @app.route("/api/set_model", methods=["POST"])
 def set_model():
@@ -37,6 +33,11 @@ def set_model():
         return jsonify({"status": "Model changed"}), 200
     return jsonify({"error": "No model specified"}), 400
 
+@app.route("/api/get_rules", methods=["GET"])
+def get_rules():
+    with open("rules.txt", "r") as file:
+        rules = file.read()
+    return jsonify({"rules": rules})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=6565)
