@@ -12,7 +12,7 @@ body.dark-mode {
 }
 
 .navbar {
-  background: linear-gradient(to right, #a0b1c4, #abbcd0);
+  background: linear-gradient(to right, #4580D6, #abbcd0);
   color: #fff;
   text-align: left;
   padding: 1rem;
@@ -92,7 +92,7 @@ body.dark-mode {
 }
 
 button {
-  background: linear-gradient(to right, #4580D6, #abbcd0);
+  background: linear-gradient(to right, #a0b1c4, #abbcd0);
   color: #fff;
   border: none;
   cursor: pointer;
@@ -104,7 +104,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to right, #a0b1c4, #abbcd0);
+  background: linear-gradient(to right, #4580D6, #4580D6);
   background-color: #4580D6;
 }
 
