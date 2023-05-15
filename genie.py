@@ -22,10 +22,10 @@ def get_chatgpt_response(model_name, messages):
             reply = response["choices"][0]["message"]["content"]
             return reply
         else:
-            return "I'm sorry, but I couldn't generate a response for that question."
+            return "The model failed to deliver the response in a valid format. See logs for debugging."
 
     except Exception as e:
         print("Error in ask_question:", e)
         print(traceback.format_exc())
 
-        return "An error occurred while processing your request."
+        return "An error occurred while processing the request. See logs for debugging."

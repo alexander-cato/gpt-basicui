@@ -4,7 +4,7 @@ from genie import get_chatgpt_response
 
 app = Flask(__name__)
 
-current_model = "gpt-3.5-turbo"
+current_model = "gpt-4"
 
 
 @app.route("/")

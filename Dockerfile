@@ -7,7 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-ENV OPENAI_API_KEY ""
+ENV OPENAI_API_KEY=$OPENAI_API_KEY
 
 EXPOSE 6565
 
