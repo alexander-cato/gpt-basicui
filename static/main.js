@@ -172,8 +172,5 @@ function loadRules() {
             role: "rules",
             content: data.rules,
         });
-    })
-    .catch((error) => {
-        console.error(error);
     });
 }
