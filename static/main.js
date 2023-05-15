@@ -150,10 +150,8 @@ function clearConversation() {
       conversationHistory = [];
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("DOMContentLoaded", function () {
     loadRules();
-    const modelSelect = document.getElementById("model-select");
-    modelSelect.addEventListener("change", changeModel);
 
     const inputText = document.getElementById('input-text');
     inputText.addEventListener('input', autoResize);
@@ -162,13 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.height = 'auto';
         this.style.height = this.scrollHeight + 'px';
     }
-
-    document
-        .querySelector(".dark-mode-toggle")
-        .addEventListener("click", function () {
-            document.body.classList.toggle("dark-mode");
-            this.classList.toggle("dark");
-        });
 });
 
 function loadRules() {
