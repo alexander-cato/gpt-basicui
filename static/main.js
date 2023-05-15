@@ -138,9 +138,9 @@ function changeModel() {
 
 function handleKeyPress(event) {
     // Add check for Command + Enter or Ctrl + Enter
-    console.log(event);
     if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
         handleFormSubmit(event);
+        console.log("Command + Enter");
     }
 }
 
