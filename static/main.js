@@ -137,10 +137,12 @@ function changeModel() {
 }
 
 function handleKeyPress(event) {
-      if (event.key === "Enter" && !event.shiftKey) {
-            handleFormSubmit(event);
-      }
+    // Add check for Command + Enter or Ctrl + Enter
+    if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
+        handleFormSubmit(event);
+    }
 }
+
 
 function clearConversation() {
       document.getElementById("response-container").innerHTML = "";
@@ -154,6 +156,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const inputText = document.getElementById("input-text");
     inputText.addEventListener("keypress", handleKeyPress);
+
+document.getElementById("input-text").addEventListener("input", autoResizeTextarea);
+
+function autoResizeTextarea() {
+    this.style.height = "auto";
+    this.style.height = (this.scrollHeight) + "px";
+}
 
     document
         .querySelector(".dark-mode-toggle")
