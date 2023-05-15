@@ -37,7 +37,7 @@
     <div class="container">
       <div class="response-container conversation-element" id="response-container"></div>
       <div class="input-container conversation-element">
-        <textarea id="input-text" rows="1" placeholder="Input..."></textarea>
+        <textarea id="input-text" rows="1" placeholder="Input..." onkeydown="handleKeyPress(event)"></textarea>
         <div class="submit-api-container">
           <button type="button" onclick="handleFormSubmit(event)">
             <i class="fas fa-paper-plane"></i>

@@ -136,14 +136,12 @@ function changeModel() {
             });
 }
 
-function handleKeyPress(event) {
-    // Add check for Command + Enter or Ctrl + Enter
-    if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
-        handleFormSubmit(event);
-        console.log("Command + Enter");
-    }
+function handleKeyPress(e) {
+  if (e.keyCode === 13 && !e.shiftKey) {  // 13 is the keycode for Enter
+    e.preventDefault();  // Prevents the default action (newline)
+    handleFormSubmit(e);  // Calls your form submit function
+  }
 }
-
 
 function clearConversation() {
       document.getElementById("response-container").innerHTML = "";
