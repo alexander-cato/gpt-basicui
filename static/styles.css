@@ -12,7 +12,7 @@ body.dark-mode {
 }
 
 .navbar {
-  background: linear-gradient(to right, #4580D6, #abbcd0);
+  background: linear-gradient(to right, #4580D6, #abbcd0, #4580D6);
   color: #fff;
   text-align: left;
   padding: 1rem;
