@@ -26,21 +26,24 @@
 
 <body>
   <div class="navbar">
-    <a>Collective.AI</a>
+    <a>Collective.AI <span class="beta-text">alpha v0.32.4 - build #1c9b03</span></a>
     <div class="nav-right">
-      <span class="beta-text"> - Debugging web console - v0.32.4-alpha | build#1c9b03</span>
+      <span class="beta-text">Debugging Web Console</span>
     </div>
-    </div>
+  </div>
   <div class="container">
-    <div class="response-container conversation-element" id="response-container"></div>
-    <div class="input-container conversation-element">
-      <textarea id="input-text" rows="1" placeholder="Input..."></textarea>
-      <div class="submit-api-container">
-        <button type="button" onclick="handleFormSubmit(event)">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-        <button type="button" onclick="clearConversation()">
-          <i class="fas fa-refresh"></i>
+    <body>Responses can take a few minutes to return from the development server, please be patient.</body>
+  </div>
+    <div class="container">
+      <div class="response-container conversation-element" id="response-container"></div>
+      <div class="input-container conversation-element">
+        <textarea id="input-text" rows="1" placeholder="Input..."></textarea>
+        <div class="submit-api-container">
+          <button type="button" onclick="handleFormSubmit(event)">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <button type="button" onclick="clearConversation()">
+            <i class="fas fa-refresh"></i>
         </button>
       </div>
     </div>
