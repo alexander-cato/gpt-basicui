@@ -150,7 +150,7 @@ function clearConversation() {
       conversationHistory = [];
 }
 
-window.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     loadRules();
 
     const inputText = document.getElementById('input-text');
